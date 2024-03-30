@@ -38,6 +38,7 @@ input[type="number"] {
     width: 20%;
     padding: 10px;
     border-radius: 15px;
+    border: none;
 }
 
 .labelArea {
