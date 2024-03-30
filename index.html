@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kar ve Vergi Hesaplama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <div class="container">
+        <h2>Kar ve Vergi Hesaplama</h2>
+        <div id="inputArea">
+            <div class="buttonArea">
+                <input type="number" class="amount" placeholder="Miktarı girin...">
+            </div>
+        </div>
+        <div class="newbuttonarea">
+            <button onclick="hesapla()">Hesapla</button>
+        </div>
+        <div class="newbuttonarea">
+            <div class="newdelbuttons">
+                <button class="new-value" onclick="addInput()">Yeni Değer Ekle</button>
+                <button class="delete-value" onclick="deleteInput()">Son Değeri Sil</button>
+            </div>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

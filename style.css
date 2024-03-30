@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: #ff7f00;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input[type="number"] {
+    width: 20%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.labelArea {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonArea {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.result {
+    display: grid;
+    border-radius: 15px;
+    width: 100%;
+    height: 300px;
+}
+
+.result p {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    font-size: larger;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.danger {
+    background: maroon !important;
+}
+
+.info {
+    border-radius: 15px 15px 0 0;
+    background: darkslategray !important;
+}
+
+.total {
+    border-radius: 0 0 15px 15px;
+    background: darkgreen !important;
+}
+
+.tb {
+    margin-left: 10px;
+    font-size: larger;
+    font-weight: bolder;
+    color: gold;
+}
+
+strong {
+    color: #fff;
+}
+
+.newbuttonarea {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+
+}
+
+.newdelbuttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    width: 300px;
+}
+
+.new-value {
+    border-radius: 15px 0 0 15px;
+    background: green;
+    padding: 15px;
+    width: 50%;
+}
+
+.delete-value {
+    border-radius: 0 15px 15px 0;
+    background: red;
+    padding: 15px;
+    width: 50%;
+}
