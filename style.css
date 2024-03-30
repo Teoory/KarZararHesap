@@ -109,6 +109,10 @@ strong {
     width: 300px;
 }
 
+.calcButton {
+    width: 50%;
+}
+
 .new-value {
     border-radius: 15px 0 0 15px;
     background: green;
