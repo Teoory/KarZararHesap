@@ -1,5 +1,12 @@
 let count = 1;
-let netkar = 0.25; // Başlangıç kar oranı
+let netkar = 0.25;
+
+document.addEventListener('input', hesapla);
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+        addInput();
+    }
+})
 
 function addInput() {
     count++;
@@ -11,6 +18,8 @@ function addInput() {
         <input type="number" class="amount" placeholder="Miktarı girin...">
     `;
     inputArea.appendChild(div);
+    const newInput = div.querySelector('.amount');
+    newInput.focus();
 }
 
 function deleteInput() {
@@ -33,7 +42,7 @@ function hesapla() {
         }
     });
 
-    const kar = totalAmount * netkar; // Kar oranını dikkate al
+    const kar = totalAmount * netkar;
     const karliFiyat = totalAmount + kar;
     const vergi = karliFiyat * 0.15;
     const sonFiyat = karliFiyat + vergi;
