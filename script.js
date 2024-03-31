@@ -1,4 +1,5 @@
 let count = 1;
+let netkar = 0.25; // Başlangıç kar oranı
 
 function addInput() {
     count++;
@@ -32,15 +33,28 @@ function hesapla() {
         }
     });
 
-    const kar = totalAmount * 0.25;
+    const kar = totalAmount * netkar; // Kar oranını dikkate al
     const karliFiyat = totalAmount + kar;
     const vergi = karliFiyat * 0.15;
     const sonFiyat = karliFiyat + vergi;
 
     document.getElementById('result').innerHTML = `
         <p class="info"><strong>Kar ve Vergisiz Toplam:</strong> <span class="tb">${totalAmount.toFixed(0)} $</span></p>
-        <p class="danger1"><strong>Kar (25% eklenecek kar):</strong> <span class="tb">${kar.toFixed(2)} $ <span style="color: white;">|</span><span style="color: white; font-size: x-small;"> Toplam:</span> ${karliFiyat} $</span></p>
+        <p class="danger1"><strong>Kar (${(netkar * 100).toFixed(0)}% eklenecek kar):</strong> <span class="tb">${kar.toFixed(2)} $ <span style="color: white;">|</span><span style="color: white; font-size: x-small;"> Toplam:</span> ${karliFiyat.toFixed(2)} $</span></p>
         <p class="danger"><strong>Vergi (Karlı fiyata 15% eklenecek):</strong> <span class="tb">${vergi.toFixed(2)} $</span></p>
         <p class="total"><strong>Toplam Fiyat (Karlı Fiyat + Vergi):</strong> <span class="tb">${sonFiyat.toFixed(2)} $</span></p>
     `;
+}
+
+function arttir() {
+    netkar += 0.05;
+    document.getElementById('netkar').value = (netkar * 100).toFixed(0); // Kar oranını güncelle
+    hesapla();
+}
+
+function azalt() {
+    if (netkar <= 0.05) return;
+    netkar -= 0.05;
+    document.getElementById('netkar').value = (netkar * 100).toFixed(0); // Kar oranını güncelle
+    hesapla();
 }

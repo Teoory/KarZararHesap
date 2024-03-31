@@ -16,13 +16,23 @@
             </div>
         </div>
         <div class="newbuttonarea">
-            <button class="calcButton" onclick="hesapla()">Hesapla</button>
-        </div>
-        <div class="newbuttonarea">
             <div class="newdelbuttons">
                 <button class="new-value" onclick="addInput()">Yeni Değer Ekle</button>
                 <button class="delete-value" onclick="deleteInput()">Son Değeri Sil</button>
             </div>
+        </div>
+        <div>
+            <div class="karOran">
+                <label>Kar oranı:</label>
+                <input type="number" class="kar" id="netkar" value="25" max="100" min="1" readonly>
+                <div class="karbuttons">
+                    <button class="kararttir" onclick="arttir()">↑</button>
+                    <button class="kazalt" onclick="azalt()">↓</button>
+                </div>
+            </div>
+        </div>
+        <div class="newbuttonarea">
+            <button class="calcButton" onclick="hesapla()">Hesapla</button>
         </div>
         <div class="result" id="result"></div>
     </div>

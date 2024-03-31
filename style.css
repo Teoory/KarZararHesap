@@ -130,3 +130,50 @@ strong {
     padding: 15px;
     width: 50%;
 }
+
+.karOran {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.karOran label {
+    margin-right: 5px;
+    user-select: none;
+}
+
+.karOran input {
+    padding: 10px;
+    border-radius: 15px 0 0 15px;
+    border: none;
+    width: 40px;
+    user-select: none;
+}
+
+.karOran input:hover {
+    cursor: default;
+}
+
+.karbuttons {
+    display: grid;
+    height: 35px;
+}
+
+
+.karbuttons button {
+    padding: 0 5px;
+    margin: 0;
+}
+
+.kararttir {
+    border-radius: 0 15px 0 0;
+    background: green;
+    color: #fff;
+}
+
+.kazalt {
+    border-radius: 0 0 15px 0;
+    background: red;
+    color: #fff;
+}
