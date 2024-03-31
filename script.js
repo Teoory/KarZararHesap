@@ -38,8 +38,9 @@ function hesapla() {
     const sonFiyat = karliFiyat + vergi;
 
     document.getElementById('result').innerHTML = `
-        <p class="info"><strong>Kar (25% eklenecek kar):</strong> <span class="tb">${kar.toFixed(2)}</span></p>
-        <p class="danger"><strong>Vergi (Karlı fiyata 15% eklenecek):</strong> <span class="tb">${vergi.toFixed(2)}</span></p>
-        <p class="total"><strong>Toplam Fiyat (Karlı Fiyat + Vergi):</strong> <span class="tb">${sonFiyat.toFixed(2)}</span></p>
+        <p class="info"><strong>Kar ve Vergisiz Toplam:</strong> <span class="tb">${totalAmount.toFixed(0)} $</span></p>
+        <p class="danger1"><strong>Kar (25% eklenecek kar):</strong> <span class="tb">${kar.toFixed(2)} $ <span style="color: white;">|</span><span style="color: white; font-size: x-small;"> Toplam:</span> ${karliFiyat} $</span></p>
+        <p class="danger"><strong>Vergi (Karlı fiyata 15% eklenecek):</strong> <span class="tb">${vergi.toFixed(2)} $</span></p>
+        <p class="total"><strong>Toplam Fiyat (Karlı Fiyat + Vergi):</strong> <span class="tb">${sonFiyat.toFixed(2)} $</span></p>
     `;
 }
